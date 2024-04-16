@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "@parcel/config-default"
+  ],
+  "namers": [
+    "parcel-namer-rewrite",
+    "@mischnic/parcel-namer-preserve-structure",
+    "..."
+  ],
+  "reporters": [
+    "...",
+    "parcel-reporter-clean-dist"
+  ],
+  "transformers": {
+    "bundle-text:*": [
+      "...",
+      "@parcel/transformer-inline-string"
+    ],
+    "data-url:*": [
+      "...",
+      "@parcel/transformer-inline-string"
+    ],
+    "./src/icons/*.svg": [
+      "parcel-transformer-svg-sprite"
+    ],
+    "*.json": [
+      "@parcel/transformer-raw"
+    ]
+  },
+  "packagers": {
+    "*.html": "parcel-packager-svg-sprite"
+  },
+  "optimizers": {
+    "*.{gif,jpeg,jpg,png,svg,webp}": [
+      "parcel-optimizer-imagemin",
+      "..."
+    ],
+    "*.css": [
+      "@parcel/optimizer-css"
+    ]
+  }
+}
