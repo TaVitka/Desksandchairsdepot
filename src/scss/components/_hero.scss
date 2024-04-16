@@ -1,0 +1,46 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.hero {
+  $root: &;
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: calc(var(--header-height) + rem(72)) 0 rem(72);
+    min-height: 712px;
+    background-position: 100% 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    clip-path: var(--clip-main);
+  }
+
+  .overlay {
+    &::before {
+      background: var(--color-blue-580);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 966px;
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  &--home {
+    .hero__content {
+      max-width: 746px;
+    }
+
+    .desc {
+      margin-bottom: rem(32);
+    }
+  }
+}

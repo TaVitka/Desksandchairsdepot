@@ -44,4 +44,8 @@
 
   //gradient
   --gradient-main: linear-gradient(360deg, rgba(0, 0, 0, 0.623) 33.13%, rgba(102, 102, 102, 0.231) 61.36%);
+
+  //clip-path
+  --clip-main: polygon(50% 0%, 100% 0, 100% 86%, 86% 92%, 80% 94%, 66% 98%, 26% 101%, 0% 97%, 0 0);
+
 }
