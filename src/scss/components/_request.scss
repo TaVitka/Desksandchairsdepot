@@ -1,0 +1,61 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.request {
+  position: relative;
+  padding: rem(80) 0;
+
+  &__wrapper {
+    @include cover-background;
+
+    position: absolute;
+    top: -186px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    max-width: 856px;
+    width: 100%;
+    margin-inline: auto;
+    padding: rem(76) rem(80);
+    text-align: center;
+    background-color: var(--color-orange-500);
+    border-radius: var(--radius-large);
+
+    h2 {
+      margin-bottom: rem(30);
+      color: var(--color-blue-500);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+  }
+
+  &__textarea {
+    margin-bottom: rem(18);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-gray-300);
+    border-radius: var(--radius-main);
+  }
+
+  textarea {
+    height: 240px;
+    resize: none;
+    border: none;
+  }
+}

@@ -58,7 +58,7 @@ textarea {
   font-weight: var(--fw-600);
   color: var(--color-blue-500);
 
-  ::placeholder {
+  &::placeholder {
     color: var(--color-blue-580);
   }
 }
