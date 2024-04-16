@@ -1,0 +1,35 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.slider {
+  padding-bottom: rem(128);
+
+  h2 {
+    margin-bottom: rem(32);
+  }
+
+  &__wrapper {
+    margin-bottom: rem(32);
+  }
+
+  &__article {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-large);
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 40px;
+    z-index: 1;
+    width: 70%;
+    max-height: 238px;
+    padding-inline: rem(32);
+    overflow: hidden;
+
+    .title {
+      margin-bottom: 16px;
+    }
+  }
+
+}

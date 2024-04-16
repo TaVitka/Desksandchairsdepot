@@ -32,32 +32,42 @@
   }
 }
 
-//*[class].swiper {
-//  .swiper-button {
-//    width: 64px;
-//    height: 64px;
-//    background-color: var(--color-gray-700);
-//    border-radius: var(--radius-round);
-//    top: 50%;
-//    transform: translateY(-50%);
-//
-//    &::after {
-//      @include contain-background();
-//
-//      content: '';
-//      position: absolute;
-//      height: 20px;
-//      width: 26px;
-//      top: 50%;
-//      left: 50%;
-//      transform: translate(-50%, -50%);
-//      background-image: var(--icon-swiper);
-//    }
-//  }
-//
-//  .swiper-button-prev {
-//    &::after {
-//      transform: translate(-50%, -50%) rotate(180deg);
-//    }
-//  }
-//}
+*[class].swiper {
+  .swiper-button {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-gray-300);
+    border-radius: var(--radius-full);
+    top: 54%;
+    transform: translateY(-60%);
+
+    &::after {
+      @include contain-background();
+
+      content: '';
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      background-image: url("../images/icons/arrow-icon.svg");
+    }
+  }
+
+  .swiper-button-prev {
+    left: 40px;
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+
+  .swiper-button-next {
+    right: 40px;
+  }
+
+  .swiper-button-disabled {
+    opacity: 0;
+  }
+}
