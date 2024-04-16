@@ -1,0 +1,47 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --content-width: 1296px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Epilogue", sans-serif;
+  --font-family-secondary: "Baloo Da 2", sans-serif;
+
+  // font-weight
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  // color
+  --color-white: #fff;
+  --color-black: #111111;
+
+  --color-orange-400: #f0bb00;
+  --color-orange-500: #d99c00;
+  --color-blue-500: #162b5f;
+  --color-blue-560: #22335f99;
+  --color-blue-580: #162b5fcc;
+  --color-blue-600: #0f1e42;
+  --color-gray-300: #f1f1f1;
+  --color-gray-400: #cfcfcf;
+  --color-gray-500: #a4a4a4;
+
+
+  //  radius
+  --radius-main: 16px;
+  --radius-small: 10px;
+  --radius-large: 32px;
+  --radius-full: 50%;
+
+  // shadow
+  --shadow-primary: 0px 30px 40px 0px #d4d9e833;
+
+  //gradient
+  --gradient-main: linear-gradient(360deg, rgba(0, 0, 0, 0.623) 33.13%, rgba(102, 102, 102, 0.231) 61.36%);
+}
