@@ -100,4 +100,39 @@
       gap: 30px;
     }
   }
+
+  &--footer {
+    justify-content: center;
+    margin-bottom: rem(36);
+
+    .nav__inner {
+      justify-content: center;
+    }
+
+    .nav__list {
+      padding-inline: 0;
+    }
+
+    .nav__item {
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin: 0 rem(52) 0 0;
+      }
+    }
+
+    .nav__link {
+      color: var(--color-blue-500);
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.4s ease-in-out;
+
+      &:hover {
+        border-bottom-color: var(--color-blue-500);
+      }
+    }
+
+    @include media(tablet) {
+      display: none;
+    }
+  }
 }
