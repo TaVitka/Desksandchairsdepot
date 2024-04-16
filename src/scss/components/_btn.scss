@@ -1,0 +1,65 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  display: inline-block;
+  margin: 0;
+  padding: 16px 22px;
+  border: 2px solid var(--color-orange-400);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-700);
+  font-size: clamp(18px, 1.4vw, 20px);
+  line-height: 1;
+  color: var(--color-blue-500) !important;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--radius-main);
+  background-color: var(--color-orange-400);
+  transition-property: background-color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: var(--color-orange-500);
+    border-color: var(--color-blue-500);
+  }
+
+  &--reverse {
+    padding: 22px;
+
+    &:hover {
+      background-color: var(--color-milk-100);
+      color: var(--color-gray-700) !important;
+    }
+  }
+}
+
+//*[class].swiper {
+//  .swiper-button {
+//    width: 64px;
+//    height: 64px;
+//    background-color: var(--color-gray-700);
+//    border-radius: var(--radius-round);
+//    top: 50%;
+//    transform: translateY(-50%);
+//
+//    &::after {
+//      @include contain-background();
+//
+//      content: '';
+//      position: absolute;
+//      height: 20px;
+//      width: 26px;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//      background-image: var(--icon-swiper);
+//    }
+//  }
+//
+//  .swiper-button-prev {
+//    &::after {
+//      transform: translate(-50%, -50%) rotate(180deg);
+//    }
+//  }
+//}

@@ -1,0 +1,71 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="./images/logo.svg" alt="Desks And Chairs Depot" width="309" height="56">
+      </a>
+
+      <button class="burger" aria-label="Mobile menu" type="button"><span></span></button>
+
+      <div class="nav__inner">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'home' }}" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'services' }}" href="services.html">
+              Services
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'catalog' }}" href="catalog.html">
+              Catalog
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'portfolio' }}" href="portfolio.html">
+              Portfolio
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <a class="nav__link" href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn request-btn" type="button" formsappId="6602d6f78d78074a5ee50c98">
+            Make An Order
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<script>
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header');
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`,
+    );
+  };
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+</script>

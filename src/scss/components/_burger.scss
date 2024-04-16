@@ -1,0 +1,79 @@
+/* stylelint-disable no-unknown-animations */
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.burger {
+  --line-height: 2px;
+  --buger-size: 20px;
+  --move: calc(var(--buger-size) / 3);
+  --move-decrement: calc(var(--move) * -1);
+  --transition-time: 0.5s;
+  --lines-color: var(--color-orange-400);
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: none;
+  width: calc(var(--buger-size) + 5px);
+  height: var(--buger-size);
+  background-color: #0000;
+  transform: translateY(-50%);
+  transition: opacity var(--transition-time) ease;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: var(--line-height);
+    background-color: var(--lines-color);
+    transform: translateY(-50%);
+    transition: transform var(--transition-time) ease, background-color var(--transition-time) ease 0.3s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: var(--line-height);
+      background-color: var(--lines-color);
+      animation-duration: 0.4s;
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      animation-fill-mode: forwards;
+    }
+
+    &::before {
+      transform: translateY(var(--move-decrement)) rotate(0);
+    }
+
+    &::after {
+      transform: translateY(var(--move)) rotate(0);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include media(tablet) {
+    display: block;
+  }
+}
+
+.closed.opened {
+  span {
+    background-color: var(--lines-color);
+    transition: background-color 0.2s;
+
+    &::before {
+      animation-name: toplineburger;
+    }
+
+    &::after {
+      animation-name: bottomlineburger;
+    }
+  }
+}

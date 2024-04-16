@@ -1,0 +1,29 @@
+/* stylelint-disable no-unknown-animations */
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.opened {
+  .nav__inner {
+    transform: translateX(0);
+  }
+
+  span {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s;
+
+    &::before,
+    &::after {
+      animation-duration: 0.2s;
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      animation-fill-mode: forwards;
+    }
+
+    &::before {
+      animation-name: toplinecross;
+    }
+
+    &::after {
+      animation-name: bottomlinecross;
+    }
+  }
+}
