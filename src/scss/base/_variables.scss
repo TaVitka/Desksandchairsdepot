@@ -28,6 +28,7 @@
   --color-blue-560: #22335f99;
   --color-blue-580: #162b5fcc;
   --color-blue-600: #0f1e42;
+  --color-gray-200: #c4c4c4;
   --color-gray-300: #f1f1f1;
   --color-gray-400: #cfcfcf;
   --color-gray-500: #a4a4a4;
@@ -47,4 +48,5 @@
 
   //clip-path
   --clip-main: polygon(50% 0%, 100% 0, 100% 86%, 86% 92%, 80% 94%, 66% 98%, 26% 101%, 0% 97%, 0 0);
+  --clip-secondary: polygon(50% 0%, 100% 0, 100% 105%, 48% 97%, 38% 95%, 23% 90%, 14% 86%, 0% 76%, 0 0);
 }
