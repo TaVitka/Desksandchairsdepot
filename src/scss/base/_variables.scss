@@ -33,6 +33,7 @@
   --color-gray-400: #cfcfcf;
   --color-gray-500: #a4a4a4;
 
+
   //  radius
   --radius-main: 16px;
   --radius-small: 10px;
@@ -46,6 +47,6 @@
   --gradient-main: linear-gradient(360deg, rgba(0, 0, 0, 0.623) 33.13%, rgba(102, 102, 102, 0.231) 61.36%);
 
   //clip-path
-  --clip-main: polygon(50% 0%, 100% 0, 100% 86%, 86% 92%, 80% 94%, 66% 98%, 26% 101%, 0% 97%, 0 0);
-  --clip-secondary: polygon(50% 0%, 100% 0, 100% 105%, 48% 97%, 38% 95%, 23% 90%, 14% 86%, 0% 76%, 0 0);
+  --clip-main: ellipse(109% 78% at 36% 22%);
+  --clip-secondary: ellipse(110% 65% at 86% 37%);
 }
