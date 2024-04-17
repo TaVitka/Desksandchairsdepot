@@ -23,7 +23,7 @@
 
   &__item {
     background-color: var(--color-blue-500);
-    border-radius: var(--radius-main) var(--radius-main) var(--radius-large)  var(--radius-large);
+    border-radius: var(--radius-main) var(--radius-main) var(--radius-large) var(--radius-large);
     overflow: hidden;
   }
 
@@ -43,6 +43,58 @@
     p {
       line-height: 1.4;
       color: var(--color-gray-300);
+    }
+  }
+
+  &__details {
+    margin-bottom: rem(64);
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 7.5vw, 122px);
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(80);
+    }
+
+    img {
+      min-width: 648px;
+      width: 100%;
+      border-radius: var(--radius-large);
+    }
+  }
+
+  &__content {
+    margin-bottom: rem(37);
+
+    .title {
+      margin-bottom: 12px;
+      color: var(--color-blue-500);
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &--details {
+    .services__desc {
+      margin-bottom: rem(64);
     }
   }
 }
