@@ -19,6 +19,16 @@ body {
   background-color: var(--color-gray-300);
   font-optical-sizing: auto;
 
+  &--no-hero {
+    .header {
+      background-color: var(--color-blue-500);
+    }
+
+    .main {
+      padding-top: var(--header-height);
+    }
+  }
+
   &__body {
     min-width: 320px;
     min-height: var(--vh);
