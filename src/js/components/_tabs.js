@@ -8,7 +8,11 @@ tabButtons?.forEach((tab, index) => {
   if (index === 0) {
     tab.classList.add('selected');
   } else {
-    tabPanels[index].setAttribute('hidden', '');
+    for (tabPanel of tabPanels) {
+      if (tabPanel.dataset.id !== document.querySelector('.selected').dataset.btn) {
+        tabPanel.setAttribute('hidden', '');
+      }
+    }
   }
 });
 
