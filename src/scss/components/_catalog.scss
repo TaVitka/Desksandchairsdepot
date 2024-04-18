@@ -15,10 +15,25 @@
     color: var(--color-blue-500);
   }
 
+  &__name {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--color-blue-500);
+  }
+
   &__desc {
     max-width: 746px;
     width: 100%;
     margin-bottom: rem(32);
+  }
+
+  &__promos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
   }
 
   &__promo {
@@ -28,6 +43,16 @@
 
     p {
       margin-bottom: rem(32);
+    }
+
+    &--slim {
+      padding: 24px;
+
+      p {
+        width: 95%;
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
     }
   }
 
