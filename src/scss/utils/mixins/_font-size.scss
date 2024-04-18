@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+
+  @if $line-height==normal {
+    line-height: normal;
+  }
+
+  @else {
+    line-height: calc($line-height / $font-size);
+    ;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  }
+
+  @else {
+    /* stylelint-disable-next-line CssSyntaxError */
+    letter-spacing: #{calc($letter-spacing / 100)}em;
+  }
+}

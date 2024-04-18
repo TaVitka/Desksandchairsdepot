@@ -1,0 +1,55 @@
+@keyframes toplinecross {
+  0% {
+    transform: translateY(var(--move-decrement));
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes bottomlinecross {
+  0% {
+    transform: translateY(var(--move));
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes toplineburger {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translateY(var(--move-decrement)) rotate(0);
+  }
+}
+
+@keyframes bottomlineburger {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translateY(var(--move)) rotate(0);
+  }
+}

@@ -1,0 +1,6 @@
+@mixin footerToBottom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: calc(var(--vh) - var(--header-height) * 2);
+}

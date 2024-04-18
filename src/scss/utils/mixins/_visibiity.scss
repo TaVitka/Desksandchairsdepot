@@ -1,0 +1,18 @@
+/* stylelint-disable scss/operator-no-unspaced */
+@mixin fade($type, $time, $amination) {
+  @if $type=="hide" {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: visibility, opacity;
+    transition-duration: $time;
+    transition-timing-function: $amination;
+  }
+
+  @else if $type=="show" {
+    opacity: 1;
+    visibility: visible;
+    transition-property: visibility, opacity;
+    transition-duration: $time;
+    transition-timing-function: $amination;
+  }
+}

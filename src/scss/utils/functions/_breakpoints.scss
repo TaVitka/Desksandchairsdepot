@@ -1,0 +1,28 @@
+/* stylelint-disable indentation */
+$breakpoints: (
+  "mobile-sm": 374px,
+  "mobile-s": 475px,
+  "mobile-m": 576px,
+  "mobile-l":768px,
+  "tablet": 992px,
+  "tablet-wide": 1180px,
+  "desktop": 1280px,
+  "desktop-wide": 1440px,
+  "desktop-l": 1600px,
+);
+
+@mixin media($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    /* stylelint-disable-next-line function-no-unknown */
+    $width: map_get($breakpoints, $width);
+
+    /* stylelint-disable-next-line scss/operator-no-unspaced */
+    @if $type==min {
+      $width: $width + 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

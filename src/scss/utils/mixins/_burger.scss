@@ -1,0 +1,35 @@
+/* stylelint-disable value-keyword-case */
+@mixin burger() {
+  left: var(--clientPoint);
+  top: var(--clientPoint);
+  z-index: 2;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before,
+  &::after,
+  span {
+    @include burger-settings;
+  }
+}
+
+@mixin burger-settings {
+  border-radius: var(--radius);
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--background);
+  transform-origin: left center;
+  transition-property: opacity, width, visibility, background-color, transform;
+  transition-duration: var(--animation-burger);
+}
