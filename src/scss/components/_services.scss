@@ -42,6 +42,11 @@
     background-color: var(--color-blue-500);
     border-radius: var(--radius-main) var(--radius-main) var(--radius-large) var(--radius-large);
     overflow: hidden;
+
+    .services__img {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
   }
 
   .overlay {
@@ -110,11 +115,15 @@
     }
   }
 
+  &--home {
+    .services__desc {
+      margin-bottom: rem(32);
+    }
+  }
+
   &--details {
     .services__desc {
-      &:not(:last-of-type) {
-        margin-bottom: rem(64);
-      }
+      margin-bottom: rem(64);
     }
   }
 
@@ -122,9 +131,7 @@
     padding-bottom: rem(80);
 
     .services__desc {
-      &:not(:last-of-type) {
-        margin-bottom: rem(48);
-      }
+      margin-bottom: rem(48);
     }
 
     .services__details {
