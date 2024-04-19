@@ -45,7 +45,9 @@
   --gradient-main: linear-gradient(360deg, rgba(0, 0, 0, 0.623) 33.13%, rgba(102, 102, 102, 0.231) 61.36%);
 
   //clip-path
-  --clip-main: ellipse(109% 78% at 36% 22%);
+  --clip-main-l: ellipse(109% 78% at 36% 22%);
+  --clip-main-m: ellipse(82% 86% at 42% 14%);
+  --clip-main-s: ellipse(100% 90% at 28% 16%);
   --clip-secondary: ellipse(110% 65% at 86% 37%);
   --clip-decor: polygon(19% 0, 100% 0, 100% 100%, 14% 100%);
 }

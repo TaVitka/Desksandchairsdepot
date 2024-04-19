@@ -14,7 +14,7 @@
     background-position: 100% 0;
     background-size: cover;
     background-repeat: no-repeat;
-    clip-path: var(--clip-main);
+    clip-path: var(--clip-main-l);
   }
 
   .overlay {
@@ -49,6 +49,50 @@
 
     .desc {
       margin-bottom: rem(32);
+    }
+  }
+
+  @include media(desktop-wide) {
+    &__content {
+      margin-left: rem(60);
+    }
+  }
+
+  @include media(tablet-wide) {
+    &__inner {
+      min-height: 550px;
+      padding: calc(var(--header-height) + rem(72)) 0 rem(42);
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      min-height: 350px;
+      padding: rem(52) 0 24px;
+      clip-path: var(--clip-main-m);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    &--home {
+      .desc {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      margin-left: 0;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__inner {
+      padding: 24px 0;
+      clip-path: var(--clip-main-s);
     }
   }
 }
