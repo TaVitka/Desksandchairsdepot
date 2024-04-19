@@ -58,7 +58,7 @@ h4 {
 
 input,
 textarea {
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.4;
   font-weight: var(--fw-600);
   color: var(--color-blue-500);

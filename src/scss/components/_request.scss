@@ -58,4 +58,37 @@
     resize: none;
     border: none;
   }
+
+  @include media(mobile-l) {
+    padding: rem(52) 0 rem(32);
+
+    &__wrapper {
+      inset: -60px 0 0;
+    }
+
+    &__inner {
+      padding: rem(52) rem(32) rem(32) rem(32);
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include media(mobile-m) {
+    padding: rem(32) 0;
+
+    &__inner {
+      padding: 16px 10px;
+    }
+
+    input,
+    textarea {
+      padding: 16px 10px;
+    }
+
+    textarea {
+      height: 180px;
+    }
+  }
 }
