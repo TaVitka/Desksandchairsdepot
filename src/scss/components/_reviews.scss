@@ -4,7 +4,7 @@
 .reviews {
   padding-bottom: rem(130);
   background-color: var(--color-blue-500);
-  clip-path: var(--clip-secondary);
+  clip-path: var(--clip-secondary-l);
 
   h2 {
     margin-bottom: rem(32);
@@ -64,6 +64,27 @@
     p {
       line-height: 1.4;
       text-align: center;
+    }
+  }
+
+  @include media(mobile-l) {
+    padding-bottom: rem(32);
+    clip-path: var(--clip-secondary-m);
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      gap: 16px;
+    }
+
+    &__text {
+      min-height: auto;
+      margin-bottom: 24px;
+      padding: 20px 16px
     }
   }
 }

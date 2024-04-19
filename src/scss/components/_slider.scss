@@ -76,10 +76,6 @@
     }
   }
 
-  @include media(mobile-m) {
-    padding-bottom: 0;
-  }
-
   @include media(mobile-s) {
     &__article {
       img {
