@@ -72,6 +72,10 @@
       clip-path: var(--clip-main-m);
     }
 
+    &__content {
+      width: 75%;
+    }
+
     h1 {
       margin-bottom: 10px;
     }
@@ -85,6 +89,7 @@
 
   @include media(mobile-l) {
     &__content {
+      width: 100%;
       margin-left: 0;
     }
   }
