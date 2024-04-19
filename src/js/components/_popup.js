@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-  const popupItems = document.querySelectorAll('[data-product]');
+  const popupItemsBtn = document.querySelectorAll('[data-product] .btn');
   const buttonRequest = document.querySelector('.header .request-btn');
   let openPopup = function(el, button) {
     let popupImage = el?.querySelector('[data-image]').getAttribute('src');
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function(){
     closePopup(document.querySelector('#product-popup'));
   }
 
-  for (let item of popupItems) {
-    item.addEventListener("click", function(){
-      openPopup(item, buttonRequest);
+  for (let btn of popupItemsBtn) {
+    btn.addEventListener("click", function(){
+      openPopup(btn.closest('[data-product]'), buttonRequest);
     })
   }
 });

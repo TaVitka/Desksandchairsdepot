@@ -19,7 +19,7 @@
   & > *:not(:last-child),
   .policy__content:not(:last-child),
   .policy__content > *:not(:last-child) {
-    margin-bottom: rem(32);
+    margin-bottom: clamp(24px, 3vw, 40px);
   }
 
   ul {
@@ -41,5 +41,9 @@
 
   @include media(desktop) {
     max-width: 100%;
+  }
+
+  @include media(tablet) {
+    padding-bottom: rem(32);
   }
 }
