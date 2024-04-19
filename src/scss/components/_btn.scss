@@ -13,6 +13,7 @@
   color: var(--color-blue-500) !important;
   text-align: center;
   white-space: nowrap;
+  cursor: pointer;
   border-radius: var(--radius-main);
   background-color: var(--color-orange-400);
   transition-property: background-color, border-color;
@@ -39,6 +40,7 @@
     &:hover {
       background-color: var(--color-blue-600);
       border-color: var(--color-orange-400);
+      color: var(--color-orange-400) !important;
     }
   }
 }
