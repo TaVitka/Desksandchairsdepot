@@ -8,7 +8,7 @@
     margin-bottom: rem(32);
   }
 
-  &__wrapper {
+  &__slides {
     margin-bottom: rem(32);
   }
 
@@ -41,4 +41,62 @@
     }
   }
 
+  @include media(tablet) {
+    padding-bottom: rem(32);
+
+    &__article {
+      img {
+        height: auto;
+        aspect-ratio: 3 / 2;
+      }
+    }
+
+    &__content {
+      width: 85%;
+    }
+  }
+
+  @include media(mobile-l) {
+    h2,
+    &__slides {
+      margin-bottom: 24px;
+    }
+
+    &__article {
+      border-radius: var(--radius-main);
+
+      &::before {
+        background: var(--gradient-intense);
+      }
+    }
+
+    &__content {
+      padding-inline: 16px;
+      bottom: 16px;
+    }
+  }
+
+  @include media(mobile-m) {
+    padding-bottom: 0;
+  }
+
+  @include media(mobile-s) {
+    &__article {
+      img {
+        aspect-ratio:  1 / 1;
+      }
+    }
+
+    &__content {
+      width: 100%;
+
+      .title {
+        font-size: 22px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+    }
+  }
 }

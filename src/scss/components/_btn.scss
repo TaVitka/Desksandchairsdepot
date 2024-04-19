@@ -81,4 +81,46 @@
   .swiper-button-disabled {
     opacity: 0;
   }
+
+  @include media(tablet) {
+    .swiper-button {
+      width: 38px;
+      height: 38px;
+      top: 44%;
+      transform: translateY(-50%);
+
+
+      &::after {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    .swiper-button {
+      transform: translateY(0%);
+      top: unset;
+      bottom: 6px;
+      background-color: var(--color-orange-400);
+
+      &::after {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(77%) saturate(137%) hue-rotate(173deg) brightness(114%) contrast(89%);
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  @include media(mobile-s) {
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+  }
 }
